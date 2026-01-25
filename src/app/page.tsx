@@ -10,11 +10,13 @@ export default async function Home() {
     <div className="min-h-screen bg-[#0a050d]">
       <main className="max-w-4xl mx-auto px-6 py-12 md:py-20">
         {/* Main Heading */}
-        <h1 className="text-3xl md:text-5xl font-bold text-[#4ade80] mb-16">
-          Saurabh Chavan / Coding & Tech
-        </h1>
 
-        {/* Welcome Section */}
+       <h1 className="text-3xl md:text-5xl font-bold text-[#4ade80] mb-16">
+        <span>Saurabh Chavan</span>
+        <span className="text-2xl md:text-3xl font-semibold ml-2">/ Mobile App Developer</span>
+      </h1>
+
+      {/* Welcome Section */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
             Welcome.
