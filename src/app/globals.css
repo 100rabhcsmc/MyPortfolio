@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
+/* Drama Sans Font */
+@font-face {
+  font-family: 'Drama Sans';
+  src: url('https://cdn.jsdelivr.net/gh/drama-sans/drama-sans/dist/DramaSans.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/drama-sans/drama-sans/dist/DramaSans.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/drama-sans/drama-sans/dist/DramaSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-drama: 'Drama Sans', Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-drama);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,5 +34,114 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Drama Sans', Arial, Helvetica, sans-serif;
+}
+
+/* Code Block Styling */
+pre {
+  background: #1a1a2e !important;
+  border: 1px solid #2d2d44 !important;
+  border-radius: 12px !important;
+  padding: 1.25rem !important;
+  overflow-x: auto !important;
+  margin: 1.5rem 0 !important;
+}
+
+pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: 'Fira Code', 'JetBrains Mono', 'SF Mono', Consolas, monospace !important;
+  font-size: 0.9rem !important;
+  line-height: 1.7 !important;
+  color: #e4e4e7 !important;
+}
+
+/* Inline code */
+:not(pre) > code {
+  background: rgba(244, 114, 182, 0.15) !important;
+  color: #f472b6 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 4px !important;
+  font-family: 'Fira Code', 'JetBrains Mono', monospace !important;
+  font-size: 0.85em !important;
+}
+
+/* Highlight.js Theme - Material Palenight */
+.hljs {
+  background: #1a1a2e !important;
+  color: #a6accd !important;
+}
+
+/* Keywords - purple */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link,
+.hljs-built_in {
+  color: #c792ea !important;
+  font-weight: 500;
+}
+
+/* Strings - green */
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #c3e88d !important;
+}
+
+/* Comments - gray italic */
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #676e95 !important;
+  font-style: italic;
+}
+
+/* Functions - blue */
+.hljs-title.function_,
+.hljs-title.class_ {
+  color: #82aaff !important;
+}
+
+/* Numbers - orange */
+.hljs-number,
+.hljs-regexp {
+  color: #f78c6c !important;
+}
+
+/* Variables & Params - coral */
+.hljs-variable,
+.hljs-params,
+.hljs-attr {
+  color: #f07178 !important;
+}
+
+/* Punctuation & Operators */
+.hljs-punctuation,
+.hljs-operator {
+  color: #89ddff !important;
+}
+
+/* Property */
+.hljs-property {
+  color: #80cbc4 !important;
+}
+
+/* Tag names in HTML/XML */
+.hljs-tag {
+  color: #f07178 !important;
+}
+
+/* Subst */
+.hljs-subst {
+  color: #a6accd !important;
 }
