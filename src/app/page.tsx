@@ -13,7 +13,8 @@ export default async function Home() {
 
        <h1 className="text-3xl md:text-5xl font-bold text-[#4ade80] mb-16">
         <span>Saurabh Chavan</span>
-        <span className="text-2xl md:text-3xl font-semibold ml-2">/ Mobile App Developer</span>
+        <span className="hidden md:inline text-2xl md:text-3xl font-semibold ml-2">/ </span>
+        <span className="block md:inline text-2xl md:text-3xl font-semibold md:ml-0 mt-2 md:mt-0">Mobile App Developer</span>
       </h1>
 
       {/* Welcome Section */}

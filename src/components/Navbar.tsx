@@ -100,6 +100,21 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Mobile Navigation - Top Header */}
+      <nav className="flex md:hidden fixed top-0 left-0 right-0 h-14 bg-[#0a050d] backdrop-blur-md border-b border-foreground/10 z-50">
+        <div className="w-full px-4 flex items-center">
+          <Link
+            href="/"
+            className="flex items-center gap-3 text-lg font-semibold text-foreground hover:text-foreground/80 transition-colors"
+          >
+            <div className="w-9 h-9 rounded-full bg-[#1a1a2e] border-2 border-foreground/20 flex items-center justify-center text-white font-bold text-sm">
+              SC
+            </div>
+            Saurabh Chavan
+          </Link>
+        </div>
+      </nav>
+
       {/* Desktop/Tablet Navigation - Top Bar */}
       <nav className="hidden md:flex fixed top-0 left-0 right-0 h-16 bg-[#0a050d] backdrop-blur-md border-b border-foreground/10 z-50">
         <div className="w-full max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -173,7 +188,7 @@ export default function Navbar() {
 
       {/* Spacer for fixed navigation */}
       <div className="hidden md:block h-16" />
-      <div className="block md:hidden h-0 pb-16" />
+      <div className="block md:hidden h-14" />
     </>
   );
 }
