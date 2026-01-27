@@ -25,7 +25,7 @@ export interface DevToArticleFull extends DevToArticle {
 export async function getDevToArticles(): Promise<DevToArticle[]> {
   try {
     const response = await fetch(
-      `https://dev.to/api/articles?username=${DEV_TO_USERNAME}&per_page=30`,
+      `https://dev.to/api/articles?username=${DEV_TO_USERNAME}`,
       { next: { revalidate: 60 } } // Revalidate every minute
     );
 
