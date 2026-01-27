@@ -101,13 +101,13 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Navigation - Top Header */}
-      <nav className="flex md:hidden fixed top-0 left-0 right-0 h-14 bg-[#0a050d] backdrop-blur-md border-b border-foreground/10 z-50">
+      <nav className="flex md:hidden fixed top-0 left-0 right-0 h-14 bg-[#0a050d] backdrop-blur-md border-b border-white/10 z-50">
         <div className="w-full px-4 flex items-center">
           <Link
             href="/"
-            className="flex items-center gap-3 text-lg font-semibold text-foreground hover:text-foreground/80 transition-colors"
+            className="flex items-center gap-3 text-lg font-semibold text-white hover:text-white/80 transition-colors"
           >
-            <div className="w-9 h-9 rounded-full bg-[#1a1a2e] border-2 border-foreground/20 flex items-center justify-center text-white font-bold text-sm">
+            <div className="w-9 h-9 rounded-full bg-[#1a1a2e] border-2 border-white/20 flex items-center justify-center text-white font-bold text-sm">
               SC
             </div>
             Saurabh Chavan
@@ -116,17 +116,17 @@ export default function Navbar() {
       </nav>
 
       {/* Desktop/Tablet Navigation - Top Bar */}
-      <nav className="hidden md:flex fixed top-0 left-0 right-0 h-16 bg-[#0a050d] backdrop-blur-md border-b border-foreground/10 z-50">
+      <nav className="hidden md:flex fixed top-0 left-0 right-0 h-16 bg-[#0a050d] backdrop-blur-md border-b border-white/10 z-50">
         <div className="w-full max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 text-xl font-semibold text-foreground hover:text-foreground/80 transition-colors"
+            className="flex items-center gap-3 text-xl font-semibold text-white hover:text-white/80 transition-colors"
           >
             <img
               src="https://ui-avatars.com/api/?name=Saurabh+Chavan&background=1a1a2e&color=fff&size=128"
               alt="Saurabh Chavan"
-              className="w-10 h-10 rounded-full object-cover border-2 border-foreground/20"
+              className="w-10 h-10 rounded-full object-cover border-2 border-white/20"
             />
             Saurabh Chavan
           </Link>
@@ -139,8 +139,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-base font-bold transition-colors ${
                     isActive(link.href)
-                      ? "text-foreground"
-                      : "text-foreground/60 hover:text-foreground"
+                      ? "text-white"
+                      : "text-white/60 hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -152,7 +152,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Navigation - Bottom Bar */}
-      <nav className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#0a050d] backdrop-blur-md border-t border-foreground/10 z-50 safe-area-inset-bottom">
+      <nav className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#0a050d] backdrop-blur-md border-t border-white/10 z-50 safe-area-inset-bottom">
         <ul className="w-full flex items-center justify-around">
           {navLinks.map((link) => (
             <li key={link.href} className="flex-1">
@@ -160,8 +160,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`flex flex-col items-center justify-center gap-1 py-2 transition-colors ${
                   isActive(link.href)
-                    ? "text-foreground"
-                    : "text-foreground/50 hover:text-foreground/80"
+                    ? "text-white"
+                    : "text-white/50 hover:text-white/80"
                 }`}
               >
                 {/* Icon */}
