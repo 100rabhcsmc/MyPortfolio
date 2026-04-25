@@ -2,6 +2,75 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 
 const projects = [
+   {
+    title: "Dubai Properties",
+    description:
+      "A real estate and property management mobile application developed for Dubai Properties. Built with React Native, featuring property browsing, virtual tours, investment analytics, secure payment integration, UAE Pass login authentication, and real-time notifications. The app streamlines the real estate buying and leasing experience with an intuitive interface and comprehensive property information display.",
+    tags: [
+      "React Native",
+      "Redux Toolkit",
+      "TypeScript",
+       "Uae Pass Login",
+      "Payment Integration",
+      "Real Estate",
+      "Virtual Tours",
+    ],
+    type: "Mobile App",
+    featured: true,
+    image:
+      "https://www.dp.ae/pictures/about-dubai-properties-en.png",
+    github: null,
+    live: null,
+    client: "Dubai Properties",
+    playStore: "https://play.google.com/store/apps/details?id=com.dhretechnology.dp&pcampaignid=web_share",
+    appStore: "https://apps.apple.com/ae/app/dubai-properties/id6743494015", 
+  },
+    {
+    title: "Meraas Properties",
+    description:
+      "A real estate and property management mobile application developed for Meraas Properties. Built with React Native, featuring property browsing, virtual tours, investment analytics, secure payment integration, UAE Pass login authentication, and real-time notifications. The app streamlines the real estate buying and leasing experience with an intuitive interface and comprehensive property information display.",
+    tags: [
+      "React Native",
+      "Redux Toolkit",
+      "TypeScript",
+       "Uae Pass Login",
+      "Payment Integration",
+      "Real Estate",
+      "Virtual Tours",
+    ],
+    type: "Mobile App",
+    featured: true,
+    image:
+      "https://www.propertyfinder.ae/blog/wp-content/uploads/2023/05/Meraas-Developer-Logo.jpeg",
+    github: null,
+    live: null,
+    client: "Meraas Properties",
+    playStore: "https://play.google.com/store/apps/details?id=com.dhretechnology.meraasapp&pcampaignid=web_share",
+    appStore: "https://apps.apple.com/ae/app/meraas/id6744596920", 
+  },
+   {
+    title: "Nakheel Properties",
+    description:
+      "A real estate and property management mobile application developed for Nakheel Properties. Built with React Native, featuring property browsing, virtual tours, investment analytics, secure payment integration, UAE Pass login authentication, and real-time notifications. The app streamlines the real estate buying and leasing experience with an intuitive interface and comprehensive property information display.",
+    tags: [
+      "React Native",
+      "Redux Toolkit",
+      "TypeScript",
+       "Uae Pass Login",
+      "Payment Integration",
+      "Real Estate",
+      "Virtual Tours",
+    ],
+    type: "Mobile App",
+    featured: true,
+    image:
+      "https://hausandestates.s3.eu-north-1.amazonaws.com/wp-content/uploads/2025/03/1671027968-f37_nakheel.png",
+    github: null,
+    live: null,
+    client: "Nakheel Properties",
+    playStore: "https://play.google.com/store/apps/details?id=com.nakheel.nakheel&pcampaignid=web_share",
+    appStore: "https://apps.apple.com/gb/app/my-nakheel/id1557837581", 
+  },
   {
     title: "Raise Connect",
     description:
@@ -130,25 +199,23 @@ export default function Projects() {
             Featured Projects
           </h2>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <article
                 key={index}
-                className="group relative rounded-2xl overflow-hidden bg-gray-900/50 border border-gray-800 hover:border-[#4ade80]/50 transition-all duration-300"
+                className="group relative rounded-2xl overflow-hidden bg-gray-900/50 border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:scale-[1.02] flex flex-col"
               >
-                <div className="md:flex">
-                  <div className="md:w-2/5 relative">
-                    <div className="aspect-[4/3] md:aspect-auto md:h-full">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a050d] hidden md:block" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a050d] to-transparent md:hidden" />
-                    </div>
+                <div className="relative w-full">
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a050d] to-transparent" />
                   </div>
-                  <div className="md:w-3/5 p-6 flex flex-col justify-center">
+                </div>
+                <div className="p-6 flex flex-col justify-center flex-1">
                     <span className="inline-block px-3 py-1 text-xs font-medium text-[#f472b6] bg-[#f472b6]/10 rounded mb-3 w-fit">
                       {project.type}
                     </span>
@@ -253,7 +320,6 @@ export default function Projects() {
                       )}
                     </div>
                   </div>
-                </div>
               </article>
             ))}
           </div>
